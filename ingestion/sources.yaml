@@ -881,6 +881,35 @@ sources:
     primary_url: https://docs.switchboard.xyz
     sitemaps: [https://docs.switchboard.xyz/sitemap.xml]
 
+  - id: mimir-docs
+    name: Mimir Docs
+    kind: web
+    enabled: true
+    sections: [oracles]
+    use_cases: "Mimir onchain price oracle, prices computed from Solana DEX pools (Raydium, Orca, Meteora, PumpSwap), long-tail token feeds, index feeds, create a feed for any token, free price API"
+    primary_url: https://mimirfeeds.io/docs/
+    start_urls:
+      - https://mimirfeeds.io/docs/
+    url_include: [/docs]
+
+  - id: mimir-api
+    name: Mimir API (OpenAPI)
+    kind: openapi
+    enabled: true
+    sections: [oracles]
+    use_cases: "Mimir REST API spec, token and index prices in USDC, batch prices, price history, feed list, pool lookup by mint, no API key"
+    primary_url: https://api.mimirfeeds.io
+    spec_url: https://api.mimirfeeds.io/openapi.json
+
+  - id: gh-mimir-sdk
+    name: GitHub QuantuLabs/mimir-sdk
+    kind: github
+    enabled: true
+    sections: [oracles, clients]
+    use_cases: "Mimir TypeScript SDK, read and watch prices, refresh and read a price in the same transaction (sendWithFreshPrice), onchain read checks, create token feeds and indexes"
+    primary_url: https://github.com/QuantuLabs/mimir-sdk
+    github: { owner: QuantuLabs, repo: mimir-sdk, include_readmes: true, include_source_code: false }
+
   # --- Bridges ---
   - id: wormhole-docs
     name: Wormhole Docs
